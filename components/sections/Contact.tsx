@@ -297,13 +297,13 @@ export default function Contact() {
                 colorClass="text-[#1DA1F2] border-[#1DA1F2]/30 hover:border-[#1DA1F2] hover:bg-[#1DA1F2]/10"
               />
             </div>
-            <a
+            {/* <a
               href="/cv.pdf"
               download
               className="mt-4 flex items-center justify-center gap-2 rounded-lg border border-border px-4 py-2.5 font-mono text-xs text-muted-foreground transition-all hover:border-primary/50 hover:text-primary"
             >
               <Download className="h-4 w-4" /> Download CV
-            </a>
+            </a> */}
           </div>
         </motion.div>
       </div>

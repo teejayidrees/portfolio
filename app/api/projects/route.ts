@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import { Project } from "@/lib/models";
 
+export const dynamic = "force-dynamic"; // <--- This breaks the production cache
+
 // GET /api/projects — public list of portfolio projects.
 export async function GET() {
   try {
