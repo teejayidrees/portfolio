@@ -65,12 +65,12 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link
+          {/* <Link
             href="/admin"
             className="ml-2 mr-2 rounded-md border border-border/60 px-3 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
           >
             admin
-          </Link>
+          </Link> */}
 
           {/* Desktop Theme Toggle */}
           <div className="border-l border-border/60 pl-3">
@@ -114,14 +114,14 @@ export default function Navbar() {
                   {l.label}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 href="/admin"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2 rounded-md px-3 py-2.5 font-mono text-sm text-muted-foreground hover:bg-secondary/60 hover:text-foreground"
               >
                 <Terminal className="h-4 w-4 text-primary" />
                 Admin Panel
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         )}
