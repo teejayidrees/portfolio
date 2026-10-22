@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import { Post } from "@/lib/models";
+export const dynamic = "force-dynamic"; // <--- This breaks the production cache
 
 export async function GET() {
   try {

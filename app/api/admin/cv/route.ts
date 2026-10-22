@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import { CV } from "@/lib/models";
 import { ADMIN_PASSWORD } from "@/lib/types";
+export const dynamic = "force-dynamic"; // <--- This breaks the production cache
 
 function authorized(req: Request) {
   return (req.headers.get("x-admin-password") ?? "") === ADMIN_PASSWORD;
