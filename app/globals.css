@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Command Center theme — deep charcoal + neon accents
+   ============================================================ */
+@layer base {
+  :root {
+    --background: 240 10% 3.5%;
+    --foreground: 210 20% 92%;
+    --card: 240 8% 6%;
+    --card-foreground: 210 20% 92%;
+    --popover: 240 8% 7%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 158 84% 52%;
+    --primary-foreground: 240 10% 3.5%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 210 20% 92%;
+    --muted: 240 6% 12%;
+    --muted-foreground: 215 16% 55%;
+    --accent: 190 95% 50%;
+    --accent-foreground: 240 10% 3.5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 240 6% 16%;
+    --input: 240 6% 18%;
+    --ring: 158 84% 52%;
+    --radius: 0.625rem;
+    --chart-1: 158 84% 52%;
+    --chart-2: 190 95% 50%;
+    --chart-3: 280 70% 60%;
+    --chart-4: 43 90% 60%;
+    --chart-5: 0 84% 60%;
+  }
+}
+@layer base {
+  /* LIGHT MODE (Fallback / Default) */
+  :root {
+    --background: 0 0% 98%; /* Off-white */
+    --foreground: 240 10% 3.5%; /* Dark charcoal text */
+    --card: 0 0% 100%; /* Pure white */
+    --card-foreground: 240 10% 3.5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.5%;
+    --primary: 158 84% 45%; /* Slightly darker neon green for light mode contrast */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 90%; /* Light gray */
+    --secondary-foreground: 240 10% 3.5%;
+    --muted: 240 5% 90%;
+    --muted-foreground: 215 16% 45%;
+    --accent: 190 95% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 240 6% 85%; /* Light gray border */
+    --input: 240 6% 85%;
+    --ring: 158 84% 45%;
+    --radius: 0.625rem;
+    --chart-1: 158 84% 52%;
+    --chart-2: 190 95% 50%;
+    --chart-3: 280 70% 60%;
+    --chart-4: 43 90% 60%;
+    --chart-5: 0 84% 60%;
+  }
+
+  /* DARK MODE (Command Center) */
+  .dark {
+    --background: 240 10% 3.5%;
+    --foreground: 210 20% 92%;
+    --card: 240 8% 6%;
+    --card-foreground: 210 20% 92%;
+    --popover: 240 8% 7%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 158 84% 52%;
+    --primary-foreground: 240 10% 3.5%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 210 20% 92%;
+    --muted: 240 6% 12%;
+    --muted-foreground: 215 16% 55%;
+    --accent: 190 95% 50%;
+    --accent-foreground: 240 10% 3.5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 240 6% 16%;
+    --input: 240 6% 18%;
+    --ring: 158 84% 52%;
+  }
+}
+
+@layer utilities {
+  /* Neon glow utilities */
+  .glow-primary {
+    box-shadow:
+      0 0 20px hsl(var(--primary) / 0.35),
+      0 0 60px hsl(var(--primary) / 0.15);
+  }
+  .glow-accent {
+    box-shadow:
+      0 0 20px hsl(var(--accent) / 0.35),
+      0 0 60px hsl(var(--accent) / 0.15);
+  }
+  .text-glow {
+    text-shadow: 0 0 12px hsl(var(--primary) / 0.45);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .mono {
+    font-family: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+  }
+  .adm-input {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(var(--input));
+    background: hsl(var(--background) / 0.6);
+    padding: 0.625rem 0.75rem;
+    font-family: var(--font-jetbrains), monospace;
+    font-size: 0.8125rem;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .adm-input:focus {
+    border-color: hsl(var(--primary) / 0.5);
+  }
+}
