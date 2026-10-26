@@ -7,7 +7,7 @@ import { Terminal, ChevronDown } from "lucide-react";
 
 const bioLines = [
   { prompt: "$", text: "who-am-i", out: "Ahmad-Idris" },
-  { prompt: "$", text: "role", out: "Web Developer (MERN / Next.js)" },
+  { prompt: "$", text: "role", out: "Full-Stack Developer (MERN / Next.js)" },
   {
     prompt: "$",
     text: "skills",
@@ -71,10 +71,10 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-5 font-mono text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Ahmad Haruna <span className="text-glow text-primary">Idris</span>
+            Ahmad <span className="text-glow text-primary">Idris</span>
           </h1>
           <p className="mt-4 max-w-md text-base text-muted-foreground sm:text-lg">
-            <span className="text-foreground">Web Developer: </span>
+            <span className="text-foreground">Full-Stack Developer: </span>
             (Next.js / MERN) &amp;{" "}
             <span className="text-accent">IoT Enthusiast</span>.
           </p>
